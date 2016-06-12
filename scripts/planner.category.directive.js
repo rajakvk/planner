@@ -10,10 +10,11 @@ angular
  * @namespace category
  * @return {<category />} dropdown list of categories list
  */
-function category() {
+function category(categoryService) {
     var spec,
         template = [];
 
+    console.log(categoryService.getCategory());
     /** @todo replace with dynamic data */
     template.push('<select name="" id="">');
     template.push(    '<option value="test1">test1</option>');
