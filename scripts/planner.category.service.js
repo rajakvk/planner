@@ -11,8 +11,8 @@ angular
  * @return {String[]} category names
  */
 function categoryService() {
-    var category = ['Grocery', 'Entertainment', 'education'];
+    var categories = ['Grocery', 'Entertainment', 'education'];
     this.getCategory = function(){
-        return category;
+        return categories;
     };
 }

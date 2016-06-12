@@ -1,5 +1,6 @@
 /**
- * 
+ * @example
+ * <category />
  */
 angular
     .module('planner')
@@ -7,7 +8,8 @@ angular
 
 /**
  * category directive to show categories
- * @namespace category
+ * @name category
+ * @required categoryService
  * @return {<category />} dropdown list of categories list
  */
 function category(categoryService) {
@@ -15,7 +17,6 @@ function category(categoryService) {
         categories = categoryService.getCategory() || [],
         template = [];
 
-    /** @todo replace with dynamic data */
     template.push('<select name="" id="">');
     template.push(    '<option value="None">Select a Category</option>');
     for (var category in categories) {
