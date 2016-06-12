@@ -12,15 +12,15 @@ angular
  */
 function category(categoryService) {
     var spec,
+        categories = categoryService.getCategory() || [],
         template = [];
 
-    console.log(categoryService.getCategory());
     /** @todo replace with dynamic data */
     template.push('<select name="" id="">');
-    template.push(    '<option value="test1">test1</option>');
-    template.push(    '<option value="test2">test2</option>');
-    template.push(    '<option value="test3">test3</option>');
-    template.push(    '<option value="test4">test4</option>');
+    template.push(    '<option value="None">Select a Category</option>');
+    for (var category in categories) {
+        template.push(    '<option value="test2">'+ categories[+category] +'</option>');
+    }
     template.push('</select>');
     template.join('');
 
